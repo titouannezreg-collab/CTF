@@ -1,153 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>CTF</title>
-<link rel="stylesheet" href="ne pas toucher/style.CSS">
-<script src="ne pas toucher/solution.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF</title>
+    <link rel="stylesheet" href="ne pas toucher/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <nav>
+        <img src="ne pas toucher/logo.png" alt="Logo du site" class="logo">
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('all')">Home</a></li>
+            <li><a href="#" onclick="showSection('section-web')">Web</a></li>
+            <li><a href="#" onclick="showSection('section-crypto')">Crypto</a></li>
+            <li><a href="#" onclick="showSection('section-Cracking')">Cracking</a></li>
+            <li><a href="#" onclick="showSection('section-stegano')">Stégano</a></li>
+            <li><a href="#" onclick="showSection('section-forensics')">Forensics</a></li>
+        </ul>
+        <div class="score-container">
+            <i class="fas fa-terminal"></i> SCORE: <span id="user-points">0</span>
+            <i class="fas fa-redo-alt" id="reset-btn" title="Réinitialiser" onclick="resetProgress()" style="margin-left:15px; cursor:pointer; font-size:0.8rem; opacity:0.5;"></i>
+        </div>
+    </nav>
 
-<header>
-    <img src="ne pas toucher/logo.png" alt="Logo du site" class="logo">
-    <ul class="nav">
-        <li><a href="#cracking">Cracking</a></li>
-        <li><a href="#inforensique">Inforensique</a></li>
-        <li><a href="#web">Web</a></li>
-        <li><a href="#steganographie">Stéganographie</a></li>
-        <li><a href="#cryptographie">Cryptographie</a></li>
-        <li><a href="#les-outils">Les outils</a></li>
-        <li><a href="#autre-ctf">Autre CTF</a></li>
-    </ul>
-</header>
+    <main class="container">
+        <section id="section-web" class="category-block">
+            <h2 class="category-title"><i class="fas fa-globe"></i> WEB EXPLOITATION</h2>
+            <div id="list-web" class="grid-challenges"></div>
+        </section>
 
-<section id="cracking">
-    <h1>Cracking</h1>
-    <h3>Tutoriel : Cracking</h3>
-    <p>Voici un script Python. Votre objectif est de retrouver le mot de passe (flag) qui est demandé par celui-ci.</p>
-    <a href="ne pas toucher/cracking/crackme.py">crackme.py</a><br>
-    <input type="text" id="flag-cracking1" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('cracking1')">Vérifier</button>
-    <p id="result-cracking1" class="flag-result"></p>
+        <section id="section-crypto" class="category-block">
+            <h2 class="category-title"><i class="fas fa-key"></i> CRYPTOGRAPHY</h2>
+            <div id="list-crypto" class="grid-challenges"></div>
+        </section>
 
-    <h3>BASE64</h3>
-    <a href="ne pas toucher/cracking/crackme python" download>cracking python.py</a><br>
-    <input type="text" id="flag-cracking2" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('cracking2')">Vérifier</button>
-    <p id="result-cracking2" class="flag-result"></p>
-</section>
+        <section id="section-Cracking" class="category-block">
+            <h2 class="category-title"><i class="fas fa-lock"></i> Cracking</h2>
+            <div id="list-Cracking" class="grid-challenges"></div>
+        </section>
 
-<section id="inforensique">
-    <h1>Inforensique</h1>
-    <h3>Un PDF qui bug</h3>
-    <p>Je n'arrive pas à l'ouvrir... Arrivez-vous à l'ouvrir ? Voici le fichier :</p>
-    <a href="ne pas toucher/inforensique/Mon_Document.pdf">Mon_Document.pdf</a><br>
-    <input type="text" id="flag-inforensique1" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('inforensique1')">Vérifier</button>
-    <p id="result-inforensique1" class="flag-result"></p>
-</section>
+        <section id="section-stegano" class="category-block">
+            <h2 class="category-title"><i class="fas fa-image"></i> STÉGANOGRAPHIE</h2>
+            <div id="list-stegano" class="grid-challenges"></div>
+        </section>
 
-<section id="web">
-    <h1>Web</h1>
-    
-    <h3>Connection 1</h3>
-    <p>Réussirez-vous à trouver le flag ?</p>
-    <a href="ne pas toucher/web/defi1.html" target="_blank">défi1.html</a><br>
-    <input type="text" id="flag-web1" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web1')">Vérifier</button>
-    <p id="result-web1" class="flag-result"></p>
-   
-    <h3>Connection 2</h3>
-    <p>Réussirez-vous à vous connecter ?</p>
-    <a href="ne pas toucher/web/defi2.html" target="_blank">défi2.html</a><br>
-    <input type="text" id="flag-web2" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web2')">Vérifier</button>
-    <p id="result-web2" class="flag-result"></p>
- 
-    <h3>La fouille sera utile</h3>
-    <p>Réussirez-vous à trouver le flag complet ?</p>
-    <a href="ne pas toucher/web/defi3/index.html" target="_blank">défi3.html</a><br>
-    <input type="text" id="flag-web3" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web3')">Vérifier</button>
-    <p id="result-web3" class="flag-result"></p>
-  
-    <h3>Contournement avec style</h3>
-    <p>Ce formulaire est désactivé et ne peut pas être utilisé. À vous de trouver le moyen de l’utiliser tout de même.</p>
-    <a href="ne pas toucher/web/defi4.html" target="_blank">défi4.html</a><br>
-    <input type="text" id="flag-web4" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web4')">Vérifier</button>
-    <p id="result-web4" class="flag-result"></p>
+        <section id="section-forensics" class="category-block">
+            <h2 class="category-title"><i class="fas fa-search"></i> FORENSICS</h2>
+            <div id="list-forensics" class="grid-challenges"></div>
+        </section>
+    </main>
 
-    <h3>Contournement avec style</h3>
-    <p>trouvez vous le mot de passe</p>
-    <a href="ne pas toucher/web/defi5.html" target="_blank">défi5.html</a><br>
-    <input type="text" id="flag-web5" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web5')">Vérifier</button>
-    <p id="result-web5" class="flag-result"></p>
+    <div id="challenge-sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <span id="side-category" class="tag">CATÉGORIE</span>
+                <button class="btn-close" onclick="closeSidebar()"><i class="fas fa-times"></i></button>
+            </div>
+            <h2 id="side-title">Titre</h2>
+            <div id="side-diff" class="difficulty-label">Difficulté</div>
+            <div class="points-badge"><i class="fas fa-bolt"></i> <span id="side-points">0</span> POINTS</div>
+            <div class="description-box"><p id="side-desc">Description...</p></div>
+            <div class="submission-zone">
+                <input type="text" id="flag-input" placeholder="FLAG{...}">
+                <button id="submit-btn" onclick="checkFlag()">VALIDER</button>
+                <p id="feedback"></p>
+            </div>
+        </div>
+    </div>
 
-    <h3>Login coté client</h3>
-    <p>Une vérification côté client... Ça vaut ce que ça vaut.</p>
-    <a href="ne pas toucher/web/defi6.html" target="_blank">défi6.html</a><br>
-    <input type="text" id="flag-web6" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('web6')">Vérifier</button>
-    <p id="result-web6" class="flag-result"></p>
-</section>
+    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
-<section id="steganographie">
-    <h1>Stéganographie</h1>
-
-    <h3>Tutoriel</h3>
-    <p>Voici une superbe image :</p>
-    <a href="ne pas toucher/steganographie/defi1.png">message d'erreur</a><br>
-    <input type="text" id="flag-stegano1" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('stegano1')">Vérifier</button>
-    <p id="result-stegano1" class="flag-result"></p>
-
-    <h3>Mes textures</h3>
-    <p>Sauriez-vous trouver le flag caché dans celle-ci ? J'ai fait une petite vidéo de compilation de mes textures :</p>
-    <a href="ne pas toucher/steganographie/textures.mp4">petite vidéo sympa</a><br>
-    <input type="text" id="flag-textures" class="flag-input" placeholder="flag{...}">
-    <button class="flag-button" onclick="checkFlag('textures')">Vérifier</button>
-    <p id="result-textures" class="flag-result"></p>
-</section>
-
-<section id="cryptographie">
-    <h1>Cryptographie</h1>
-
-    <h3>Grands serpents</h3>
-    <p>Réussirez-vous à trouver le flag caché dans ce script ?</p>
-    <a href="ne pas toucher/cryptographie/great_snakes.py">great_snakes.py</a><br>
-    <input type="text" id="flag-snakes" class="flag-input" placeholder="crypto{...}">
-    <button class="flag-button" onclick="checkFlag('snakes')">Vérifier</button>
-    <p id="result-snakes" class="flag-result"></p>
-
-    <h3>ASCII</h3>
-    <a href="ne pas toucher/cryptographie/ASCII.txt" download>ASCII.txt</a><br>
-    <input type="text" id="flag-ascii" class="flag-input" placeholder="crypto{...}">
-    <button class="flag-button" onclick="checkFlag('ascii')">Vérifier</button>
-    <p id="result-ascii" class="flag-result"></p>
-
-    <h3>HEX</h3>
-    <a href="ne pas toucher/cryptographie/HEX.txt" download>HEX.txt</a><br>
-    <input type="text" id="flag-hex" class="flag-input" placeholder="crypto{...}">
-    <button class="flag-button" onclick="checkFlag('hex')">Vérifier</button>
-    <p id="result-hex" class="flag-result"></p>
-   
-    <h3>BASE64</h3>
-    <a href="ne pas toucher/cryptographie/BASE64.txt" download>BASE64.txt</a><br>
-    <input type="text" id="flag-base64" class="flag-input" placeholder="crypto{...}">
-    <button class="flag-button" onclick="checkFlag('base64')">Vérifier</button>
-    <p id="result-base64" class="flag-result"></p>
-   
-    <h3>XOR</h3>
-    <a href="ne pas toucher/cryptographie/xor.txt" download>xor.txt</a><br>
-    <input type="text" id="flag-xor" class="flag-input" placeholder="crypto{...}">
-    <button class="flag-button" onclick="checkFlag('xor')">Vérifier</button>
-    <p id="result-xor" class="flag-result"></p>
-</section>
-
+    <script src="ne pas toucher/script.js"></script>
 </body>
-
 </html>
-
-
