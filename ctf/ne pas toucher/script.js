@@ -6,21 +6,25 @@ const challenges = [
 
     { id: 3, title: "Un PDF qui bug", category: "Forensics", difficulty: "Facile", points: 10, desc: "Analyser le PDF.<br><a href='ne pas toucher/Forensics/Mon_Document.pdf' download class='download-btn'>Télécharger</a>", flag: "flag{Easy_Cheesy}" },
 
-    { id: 4, title: "Connection 1", category: "Web", difficulty: "Facile", points: 10, desc: "Trouver le flag sur la page.<br><a href='ne pas toucher/web/defi1/defi1.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{CTFWEB}" },
-    { id: 5, title: "Connection 2", category: "Web", difficulty: "Facile", points: 10, desc: "Contourner la connexion.<br><a href='ne pas toucher/web/defi2/defi2.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{W3bInv3st!gat0r}" },
-    { id: 6, title: "La fouille sera utile", category: "Web", difficulty: "Moyen", points: 20, desc: "Trouver le flag complet.<br><a href='ne pas toucher/web/defi3/defi3.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{illusion_regarde_pas_ce_que_tu_vois}" },
-    { id: 7, title: "Contournement avec style", category: "Web", difficulty: "Moyen", points: 20, desc: "Activer un formulaire désactivé.<br><a href='ne pas toucher/web/defi4/defi4.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ADMIN_ACCESS_GRANTED}" },
-    { id: 8, title: "Mot de passe caché", category: "Web", difficulty: "Moyen", points: 20, desc: "Trouver le mot de passe.<br><a href='ne pas toucher/web/defi5/defi5.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{123azerty}" },
-    { id: 9, title: "Login côté client", category: "Web", difficulty: "Moyen", points: 20, desc: "Bypass vérification JS.<br><a href='ne pas toucher/web/defi6/defi6.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ALW7hsCNY9}" },
+    { id: 4, title: "Tutoriel", category: "Web", difficulty: "Très Facile", points: 5, desc: "Le flag est sur cette page : <br><a href='ne pas toucher/web/defi8/Tutoriel.html' target='_blank'>Clique ici</a>", flag: "FLAG{TUt0riE1_f14g}" },
+    { id: 5, title: "Connection 1", category: "Web", difficulty: "Facile", points: 10, desc: "Trouver le flag sur la page.<br><a href='ne pas toucher/web/defi1/defi1.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{CTFWEB}" },
+    { id: 6, title: "Connection 2", category: "Web", difficulty: "Facile", points: 10, desc: "Contourner la connexion.<br><a href='ne pas toucher/web/defi2/defi2.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{W3bInv3st!gat0r}" },
+    { id: 7, title: "La fouille sera utile", category: "Web", difficulty: "Moyen", points: 20, desc: "Trouver le flag complet.<br><a href='ne pas toucher/web/defi3/defi3.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{illusion_regarde_pas_ce_que_tu_vois}" },
+    { id: 8, title: "Contournement avec style", category: "Web", difficulty: "Moyen", points: 20, desc: "Activer un formulaire désactivé.<br><a href='ne pas toucher/web/defi4/defi4.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ADMIN_ACCESS_GRANTED}" },
+    { id: 9, title: "Mot de passe caché", category: "Web", difficulty: "Moyen", points: 20, desc: "Trouver le mot de passe.<br><a href='ne pas toucher/web/defi5/defi5.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{123azerty}" },
+    { id: 10, title: "Login côté client", category: "Web", difficulty: "Moyen", points: 20, desc: "Bypass vérification JS.<br><a href='ne pas toucher/web/defi6/defi6.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ALW7hsCNY9}" },
+    { id: 11, title: "NEON_BYPASS", category: "Web", difficulty: "difficile", points: 30, desc: "Trouvez la clé pour déverrouiller le terminal et obtenir le flag. <br><br> <a href='ne pas toucher/defi7/index.html' target='_blank'>Acceder au site</a>", flag: "FLAG{N30N/R3U36_H4CKER}" },
     
-    { id: 10, title: "Tutoriel Stéganographie", category: "Stégano", difficulty: "Facile", points: 10, desc: "Voici une superbe image.<br><a href='ne pas toucher/stegano/défi1.png' download class='download-btn'>Télécharger</a>", flag: "flag{presquecaché}" },
-    { id: 11, title: "Mes textures", category: "Stégano", difficulty: "Moyen", points: 20, desc: "Analyser la vidéo.<br><a href='ne pas toucher/stegano/textures.mp4' download class='download-btn'>Télécharger</a>", flag: "flag{stegapause}" },
+    
+    
+    { id: 12, title: "Tutoriel Stéganographie", category: "Stégano", difficulty: "Facile", points: 10, desc: "Voici une superbe image.<br><a href='ne pas toucher/stegano/défi1.png' download class='download-btn'>Télécharger</a>", flag: "flag{presquecaché}" },
+    { id: 13, title: "Mes textures", category: "Stégano", difficulty: "Moyen", points: 20, desc: "Analyser la vidéo.<br><a href='ne pas toucher/stegano/textures.mp4' download class='download-btn'>Télécharger</a>", flag: "flag{stegapause}" },
 
-    { id: 12, title: "Grands serpents", category: "Crypto", difficulty: "Moyen", points: 20, desc: "Analyser script Python.<br><a href='ne pas toucher/cryptographie/great_snakes.py' download class='download-btn'>Télécharger</a>", flag: "crypto{z3n_0f_pyth0n}" },
-    { id: 13, title: "ASCII", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder ASCII.<br><a href='ne pas toucher/cryptographie/ASCII.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{ASCII_pr1nt4bl3}" },
-    { id: 14, title: "HEX", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder HEX.<br><a href='ne pas toucher/cryptographie/HEX.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{You_will_be_working_with_hex_strings_a_lot}" },
-    { id: 15, title: "BASE64", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder Base64.<br><a href='ne pas toucher/cryptographie/BASE64.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{Base+64+Encoding+is+Web+Safe}" },
-    { id: 16, title: "XOR", category: "Crypto", difficulty: "Difficile", points: 30, desc: "Déchiffrement XOR.<br><a href='ne pas toucher/cryptographie/xor.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{LYCEE}" }
+    { id: 14, title: "Grands serpents", category: "Crypto", difficulty: "Moyen", points: 20, desc: "Analyser script Python.<br><a href='ne pas toucher/cryptographie/great_snakes.py' download class='download-btn'>Télécharger</a>", flag: "crypto{z3n_0f_pyth0n}" },
+    { id: 15, title: "ASCII", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder ASCII.<br><a href='ne pas toucher/cryptographie/ASCII.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{ASCII_pr1nt4bl3}" },
+    { id: 16, title: "HEX", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder HEX.<br><a href='ne pas toucher/cryptographie/HEX.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{You_will_be_working_with_hex_strings_a_lot}" },
+    { id: 17, title: "BASE64", category: "Crypto", difficulty: "Facile", points: 10, desc: "Décoder Base64.<br><a href='ne pas toucher/cryptographie/BASE64.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{Base+64+Encoding+is+Web+Safe}" },
+    { id: 18, title: "XOR", category: "Crypto", difficulty: "Difficile", points: 30, desc: "Déchiffrement XOR.<br><a href='ne pas toucher/cryptographie/xor.txt' download class='download-btn'>Télécharger</a>", flag: "crypto{LYCEE}" }
 ];
 
 let userScore = 0;
@@ -164,4 +168,5 @@ function showSection(sectionId) {
     });
 
     currentSection = sectionId;
+
 }
