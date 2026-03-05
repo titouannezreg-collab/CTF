@@ -13,7 +13,7 @@ const challenges = [
     { id: 8, title: "Contournement avec style", category: "Web", difficulty: "Moyen", points: 20, desc: "Activer un formulaire désactivé.<br><a href='ne pas toucher/web/defi4/defi4.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ADMIN_ACCESS_GRANTED}" },
     { id: 9, title: "Mot de passe caché", category: "Web", difficulty: "Moyen", points: 20, desc: "Trouver le mot de passe.<br><a href='ne pas toucher/web/defi5/defi5.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{123azerty}" },
     { id: 10, title: "Login côté client", category: "Web", difficulty: "Moyen", points: 20, desc: "Bypass vérification JS.<br><a href='ne pas toucher/web/defi6/defi6.html' class='WEB-btn' target='_blank'>Accéder</a>", flag: "flag{ALW7hsCNY9}" },
-    { id: 11, title: "NEON_BYPASS", category: "Web", difficulty: "difficile", points: 30, desc: "Trouvez la clé pour déverrouiller le terminal et obtenir le flag. <br><br> <a href='ne pas toucher/defi7/index.html' target='_blank'>Acceder au site</a>", flag: "FLAG{N30N/R3U36_H4CKER}" },
+    { id: 11, title: "NEON_BYPASS", category: "Web", difficulty: "Difficile", points: 30, desc: "Trouvez la clé pour déverrouiller le terminal et obtenir le flag. <br><br> <a href='ne pas toucher/defi7/index.html' target='_blank'>Acceder au site</a>", flag: "FLAG{N30N/R3U36_H4CKER}" },
     
     
     
@@ -170,3 +170,4 @@ function showSection(sectionId) {
     currentSection = sectionId;
 
 }
+
