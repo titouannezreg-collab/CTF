@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box">
+  <h4>Zone administrateur</h4>
+  <div id="flag" style="display:none">
+    ✅ Flag final : <br>
+    <strong>flag{ADMIN_ACCESS_GRANTED}</strong>
+  </div>
+  <div id="denied" style="display:none; color:red">
+    Accès refusé. Vous n'êtes pas authentifié.
+  </div>
+</div>
+<script>
+  const token = sessionStorage.getItem("token");
+  const connected = sessionStorage.getItem("connected");
+  if (connected === "true" && token === "4dm1n_t0k3n_9f2x") {
+    document.getElementById("flag").style.display = "block";
+  } else {
+    document.getElementById("denied").style.display = "block";
+  }
+</script>
+</body>
+</html>
