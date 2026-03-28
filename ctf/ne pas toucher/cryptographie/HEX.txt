@@ -1,0 +1,4 @@
+Le message a subi deux transformations avant d'être converti en hexadécimal.
+Indice : les octets ne sont pas dans le bon ordre, et ils ont été modifiés.
+
+57 5e 45 46 75 4b 75 59 4d 44 43 58 5e 59 75 52 4f 42 75 42 5e 43 5d 75 4d 44 43 41 58 45 5d 75 4f 48 75 46 46 43 5d 75 5f 45 73 51 45 5e 5a 53 58 49

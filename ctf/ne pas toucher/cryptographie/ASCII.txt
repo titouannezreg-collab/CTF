@@ -1,0 +1,4 @@
+Les codes suivants ont été transformés avant d'être listés.
+Indice : la transformation dépend de la position de chaque caractère.
+
+[106, 111, 128, 109, 123, 108, 130, 62, 90, 64, 80, 70, 102, 109, 121, 46, 117, 113, 59, 95, 115, 48, 132]

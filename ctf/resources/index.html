@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~/ctf-resources</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="terminal">
+
+    <div id="terminal-bar">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span id="terminal-title">bash — ~/ctf-resources</span>
+    </div>
+
+    <div id="terminal-body">
+
+      <div id="prompt-header">
+        <span class="line"><span class="prompt-sym">root@kali</span>:<span class="cmd">~/ctf</span>$ whoami</span>
+        <span class="line"><span class="comment"># hacker in progress.</span></span>
+        <span class="line">&nbsp;</span>
+      </div>
+
+      <div id="search-line">
+        <label><span class="prompt-sym">root@kali</span>:<span class="cmd">~/ctf</span>$ grep&nbsp;</label>
+        <input id="search" type="text" placeholder="rechercher une source..." autocomplete="off" spellcheck="false" />
+        <span class="cursor"></span>
+      </div>
+
+      <hr class="divider" />
+
+      <ul id="t">
+        <li data-name="cyberini"><a href="https://cyberini.com/ctf" target="_blank" rel="noopener" data-tag="CTF">cyberini</a></li>
+        <li data-name="cryptohack"><a href="https://cryptohack.org/" target="_blank" rel="noopener" data-tag="CRYPTO">cryptohack</a></li>
+        <li data-name="hacker logo"><a href="https://fr.vecteezy.com/art-vectoriel/4847499-hacker-e-sport-logo-style" target="_blank" rel="noopener" data-tag="ASSET">hacker logo</a></li>
+        <li data-name="ctf slayzbs"><a href="https://slayzbs.github.io/CTF/" target="_blank" rel="noopener" data-tag="CTF">ctf slayzbs</a></li>
+        <li data-name="root-me"><a href="https://www.root-me.org/" target="_blank" rel="noopener" data-tag="HACKING">root-me</a></li>
+        <li data-name="cyber-learning"><a href="https://cyber-learning.fr/" target="_blank" rel="noopener" data-tag="LEARN">cyber-learning</a></li>
+      </ul>
+
+      <div id="no-results">no match found.</div>
+
+    </div>
+
+    <div id="status-bar">
+      <div id="status-indicator">
+        <span id="status-dot"></span>
+        <span id="status-text">6 resources indexed</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const items = document.querySelectorAll('#t li');
+    const noResults = document.getElementById('no-results');
+    const statusText = document.getElementById('status-text');
+    const total = items.length;
+
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      let visible = 0;
+
+      items.forEach(li => {
+        const name = li.getAttribute('data-name');
+        const tag = li.querySelector('a').getAttribute('data-tag').toLowerCase();
+        const match = !q || name.includes(q) || tag.includes(q);
+        li.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+      statusText.textContent = q
+        ? `${visible}/${total} resources matched`
+        : `${total} resources indexed`;
+    });
+  </script>
+
+</body>
+</html>
