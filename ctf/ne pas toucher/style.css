@@ -41,7 +41,7 @@ nav {
 .logo-box:hover { box-shadow: 0 0 15px var(--accent); transform: scale(1.05); }
 
 .nav-links { display: flex; list-style: none; gap: 1.2rem; }
-.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.95rem; text-transform: uppercase; font-weight: 600; }
+.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; font-weight: 600; }
 .nav-links a:hover { color: var(--accent); }
 
 
