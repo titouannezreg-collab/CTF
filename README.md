@@ -111,7 +111,5 @@ Des challenges conçus pour mettre à l'épreuve vos compétences et votre pers�
 
 Sélectionnez une catégorie puis choisissez un défi correspondant à votre niveau.
 
-Les challenges sont accessibles directement via les liens ci-dessous.
-
 Bonne chance et amusez-vous bien ! 🚩
 
