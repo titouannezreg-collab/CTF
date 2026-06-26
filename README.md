@@ -42,13 +42,6 @@ Une sélection de ressources, outils et documentations pour progresser et décou
 
 Parfait pour débuter. Ces défis permettent de découvrir les bases des CTF et les outils les plus courants.
 
-### Ce que vous pouvez attendre
-
-* Recherche d'informations simples
-* Encodages basiques
-* Analyse élémentaire de fichiers
-* Premières manipulations web
-
 ---
 
 ## 🔵 Facile
@@ -57,12 +50,7 @@ Parfait pour débuter. Ces défis permettent de découvrir les bases des CTF et 
 
 Des challenges accessibles nécessitant un peu plus d'observation et de réflexion.
 
-### Ce que vous pouvez attendre
 
-* Vulnérabilités web simples
-* Chiffrements classiques
-* Stéganographie basique
-* Analyse de programmes simples
 
 ---
 
@@ -72,12 +60,6 @@ Des challenges accessibles nécessitant un peu plus d'observation et de réflexi
 
 Des défis demandant une bonne compréhension des concepts et parfois plusieurs étapes de résolution.
 
-### Ce que vous pouvez attendre
-
-* Vulnérabilités plus élaborées
-* Analyse réseau
-* Reverse engineering intermédiaire
-* Combinaison de plusieurs techniques
 
 ---
 
@@ -87,12 +69,6 @@ Des défis demandant une bonne compréhension des concepts et parfois plusieurs 
 
 Des challenges conçus pour mettre à l'épreuve vos compétences et votre persévérance.
 
-### Ce que vous pouvez attendre
-
-* Chaînes d'exploitation complexes
-* Reverse engineering avancé
-* Analyse forensique approfondie
-* Scénarios nécessitant créativité et méthodologie
 
 ---
 
